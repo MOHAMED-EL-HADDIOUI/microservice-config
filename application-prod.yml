@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Config-Prod
+
+# configuration d'Eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    # indique si les informations doivent être récupérées depuis le serveur Eureka.
+    fetch-registry: true         # doit être identique à register-with-eureka: true.
+    register-with-eureka: true   # s'inscrire auprès du serveur Eureka.
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # indique comment se connecter au registre de services Eureka.
